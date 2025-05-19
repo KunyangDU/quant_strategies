@@ -2,7 +2,7 @@
 from datas import *
 from npwrapper import *
 from Alphas import Alphas
-from dataIO import get_hs300_stocks
+from fileIO import get_hs300_stocks
 
 class Alphas191(Alphas):
     def __init__(self, df_data):
@@ -1112,8 +1112,6 @@ class Alphas191(Alphas):
     def alpha191(self):   #1721
         ####((CORR(MEAN(VOLUME,20), LOW, 5) + ((HIGH + LOW) / 2)) - CLOSE)###
         return ((Corr(Mean(self.volume,20), self.low, 5) + ((self.high + self.low) / 2)) - self.close)
-
-import os
 
 if __name__ == '__main__':
     year = '2019'
