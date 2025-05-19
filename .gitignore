@@ -10,6 +10,8 @@ index/
 alphas/
 test*
 
+.DS_Store
+
 # Distribution / packaging
 .Python
 build/
